@@ -46,3 +46,7 @@ Para mais informações, você pode nos encontrar nas redes sociais:
 
 - [Instagram](https://instagram.com/revistaxenite)
 - [Facebook](https://facebook.com/revistaxenite)
+
+
+A trabalheira toda foi de Amanda amanda@koalan.com.br
+e @allanc85 :) 
