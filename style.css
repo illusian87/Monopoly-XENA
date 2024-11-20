@@ -103,10 +103,10 @@ body {
   
   .parking {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    font-size: 14px;
-    height: 125.5px;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0deg);
   }
   .parking > div {
     transform: rotate(135deg);
@@ -122,20 +122,27 @@ body {
     grid-column: 11;
     grid-row: 1;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     width: 126px;
     height: 125.5px;
-  }
-  .go-to-jail > div {
-    transform: rotate(-135deg);
-    margin: 20px 0px 0 -5px;
-  }
-  .go-to-jail img {
+    transform: rotate(0deg); /* Ajuste conforme necessário */
+}
+
+.go-to-jail > div {
+    transform: rotate(-125deg); /* Ajuste o ângulo para a orientação desejada */
+    margin: 0;
+    text-align: center;
+}
+
+.go-to-jail img {
     width: 40%;
     margin: 6px 0 2px;
-  }
+    transform: rotate(0deg); /* Ajuste conforme necessário */
+}
+
   
   .jail {
     grid-column: 1;
@@ -176,21 +183,30 @@ body {
     grid-row: 11;
     position: relative;
     width: 126px;
-  }
-  .pass-go > div {
-    transform: rotate(-45deg);
-    margin: 25px 0 0 -5px;
-  }
-  .pass-go p:nth-child(2) {
+    height: 125.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pass-go > div {
+    transform: rotate(0deg); /* Ajuste para a orientação correta */
+    margin: 0;
+    text-align: center;
+}
+
+.pass-go p:nth-child(2) {
     font-size: 38px;
     font-weight: 700;
-  }
-  .pass-go img {
+    margin: 0;
+}
+
+.pass-go img {
     width: 50%;
-    margin-top: -25px;
-    transform: rotate(-132deg);
-  }
-  
+    margin-top: 0;
+    transform: rotate(0deg); /* Ajuste para a orientação correta */
+}
   .chance {
   display: flex;
   flex-direction: column;
@@ -371,3 +387,82 @@ body {
     margin-top: auto;
     margin-bottom: 8px;
   }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pieces {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.pieces div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pieces img {
+  width: 40px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  margin: 5px;
+  transform: rotate(0deg); /* Ajuste para a orientação correta */
+}
+  .game-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+  }
+  
+  .left-panel, .right-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 45%;
+  }
+  
+  .player {
+      margin-bottom: 20px;
+      text-align: center;
+  }
+  
+  .player-select {
+      margin-bottom: 10px;
+  }
+  
+  .player-image {
+      width: 50px; /* Ajuste o tamanho conforme necessário */
+      height: auto;
+  }
+  .deck {
+    position: absolute;
+    right: 20px;
+    top: 600px;
+    width: 200px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 240px;
+    background-image: url('https://i.ibb.co/nPLpHXp/17.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #000;
+    margin-top: -10px; /* Ajuste para sobrepor as cartas suavemente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg); /* Inverte a carta para mostrar o verso */
+    z-index: 1;
+}
+
+.card:last-child {
+    margin-top: 0; /* Remove a sobreposição da última carta */
+    z-index: 2; /* Garante que a última carta fique no topo */
+}

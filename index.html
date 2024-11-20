@@ -9,7 +9,106 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h2>Monopoly de Xena - Possível jogar até 4 pessoas</h2>
+
+    <div class="game-container">
+        <div class="left-panel">
+            <div class="player">
+                <h3>Player 1: Seleção</h3>
+                <select class="player-select" data-player="1">
+                    <option value="amarelo">Gato Amarelinho</option>
+                    <option value="branco">Gato Branquinho</option>
+                    <option value="coracao">Gato Apaixonado</option>
+                    <option value="dalmata">Gato Dálmata</option>
+                    <option value="roxo">Gato Roxo</option>
+                    <option value="salem">Gato Salém</option>
+                </select>
+                <img class="player-image" src="https://i.ibb.co/mJz7BwG/amarelo.png" alt="Gato Amarelinho">
+            </div>
+            <div class="player">
+                <h3>Player 2: Seleção</h3>
+                <select class="player-select" data-player="2">
+                    <option value="amarelo">Gato Amarelinho</option>
+                    <option value="branco">Gato Branquinho</option>
+                    <option value="coracao">Gato Apaixonado</option>
+                    <option value="dalmata">Gato Dálmata</option>
+                    <option value="roxo">Gato Roxo</option>
+                    <option value="salem">Gato Salém</option>
+                </select>
+                <img class="player-image" src="https://i.ibb.co/mJz7BwG/amarelo.png" alt="Gato Amarelinho">
+            </div>
+        </div>
+    
+        <div class="right-panel">
+            <div class="player">
+                <h3>Player 3: Seleção</h3>
+                <select class="player-select" data-player="3">
+                    <option value="amarelo">Gato Amarelinho</option>
+                    <option value="branco">Gato Branquinho</option>
+                    <option value="coracao">Gato Apaixonado</option>
+                    <option value="dalmata">Gato Dálmata</option>
+                    <option value="roxo">Gato Roxo</option>
+                    <option value="salem">Gato Salém</option>
+                </select>
+                <img class="player-image" src="https://i.ibb.co/5LkCTCx/coracao.png" alt="Gato Apaixonado">
+            </div>
+            <div class="player">
+                <h3>Player 4: Seleção</h3>
+                <select class="player-select" data-player="4">
+                    <option value="amarelo">Gato Amarelinho</option>
+                    <option value="branco">Gato Branquinho</option>
+                    <option value="coracao">Gato Apaixonado</option>
+                    <option value="dalmata">Gato Dálmata</option>
+                    <option value="roxo">Gato Roxo</option>
+                    <option value="salem">Gato Salém</option>
+                </select>
+                <img class="player-image" src="https://i.ibb.co/NL3pYxx/dalmata.png" alt="Gato Dálmata">
+            </div>
+        </div>
+    </div>
+    <div class="pieces">
+        <!-- Jogador 1 -->
+        <div class="player1">
+            <img src="https://i.ibb.co/CJNpMWg/home.png" alt="Casa Jogador 1">
+            <img src="https://i.ibb.co/1LzSj1X/hotel.png" alt="Hotel Jogador 1">
+        </div>
+        <!-- Jogador 2 -->
+        <div class="player2">
+            <img src="https://i.ibb.co/HNDPRTJ/home-1.png" alt="Casa Jogador 2">
+            <img src="https://i.ibb.co/gbY0HRS/hotel-1.png" alt="Hotel Jogador 2">
+        </div>
+        <!-- Jogador 3 -->
+        <div class="player3">
+            <img src="https://i.ibb.co/kJ6KyGs/home-2.png" alt="Casa Jogador 3">
+            <img src="https://i.ibb.co/z20dCbc/resort.png" alt="Hotel Jogador 3">
+        </div>
+        <!-- Jogador 4 -->
+        <div class="player4">
+            <img src="https://i.ibb.co/8Dq0jPy/cabin.png" alt="Casa Jogador 4">
+            <img src="https://i.ibb.co/tHvR69Z/travel.png" alt="Hotel Jogador 4">
+        </div>
+    </div>
 <div class="main-content">
+    
+    <div class="deck">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+    
     <div class="middle-space">
         <div class="stack stack--community">
             <img src="https://i.ibb.co/L1nVJqG/cruz.png" />
@@ -226,6 +325,7 @@
         <a href="https://codepen.io/collection/DQvYpQ/" target="_blank">Olivia Ng.</a>
     </div>
 </aside>
+
 <footer>
     <a href="https://instagram.com/revistaxenite" target="_blank">
         <i class="icon-social-instagram icons"></i>
@@ -235,4 +335,25 @@
     </a>
 </footer>
 </body>
+<script>
+    document.querySelectorAll('.player-select').forEach(select => {
+        select.addEventListener('change', function() {
+            const selectedValue = this.value;
+            const playerImages = {
+                amarelo: "https://i.ibb.co/mJz7BwG/amarelo.png",
+                branco: "https://i.ibb.co/yPfjtzH/branco.png",
+                coracao: "https://i.ibb.co/5LkCTCx/coracao.png",
+                dalmata: "https://i.ibb.co/NL3pYxx/dalmata.png",
+                roxo: "https://i.ibb.co/vchfq4k/roxo.png",
+                salem: "https://i.ibb.co/s983Xpp/salem.png"
+            };
+    
+            // Atualiza a imagem do jogador correspondente
+            const playerImage = this.parentElement.querySelector('.player-image');
+            if (playerImage) {
+                playerImage.src = playerImages[selectedValue];
+            }
+        });
+    });
+    </script>
 </html>
